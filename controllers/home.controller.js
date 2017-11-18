@@ -13,16 +13,18 @@
 
         vm.deleteUser=deleteUser;
         vm.displayUser=displayUser;
+        vm.editUser=editUser;
+
+        function editUser(id){
+            $location.path('/edit/'+id+"/");
+        }
 
         function deleteUser(index){
-            debugger;
             UserService.deleteUser(index);
         }
 
         function displayUser(id){
-            debugger;
             $location.path('/users/'+id);
-            
         }
 
 

@@ -14,21 +14,20 @@
                 controller:'HomeController as vm'
             })
             .when("/users",{
-                redirectTo:'/users/add'
+                redirectTo:'/'
             })
             .when("/users/add",{
                 templateUrl:'views/addUser.view.html',
                 controller:'AddUserController as vm'
             })
-            .when("/users/edit",{
-                templateUrl:'views/editUser.view.html'
+            .when("/edit/:userId",{
+                templateUrl:'views/editUser.view.html',
+                 controller:'EditUserController as vm'
             })
             .when("/users/:userId",{
                 templateUrl:'views/displayUser.view.html',
                 controller: 'DisplayController as vm'
             })
-            
-            
             .otherwise({
                 redirectTo:'/'
             });

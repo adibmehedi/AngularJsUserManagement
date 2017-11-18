@@ -11,8 +11,8 @@
         var vm = this;
 
         var userId=$routeParams.userId;
-        debugger;
         vm.userData=UserService.getUserDetails(userId);
+        debugger;
     }
 
 })();

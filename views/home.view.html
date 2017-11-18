@@ -14,7 +14,7 @@
         <td>{{user.email}}</td>
         <td>
             <button type="submit" class="btn btn-success" ng-click="vm.displayUser(user.$id)">Display</button></a>
-            <button type="submit" class="btn btn-info">Edit</button>
+            <button type="submit" class="btn btn-info" ng-click="vm.editUser(user.$id)">Edit</button>
             <button type="submit" class="btn btn-danger" ng-click="vm.deleteUser($index)">Delete</button>
         </td>
       </tr>

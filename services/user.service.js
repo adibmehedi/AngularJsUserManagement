@@ -29,6 +29,11 @@
             return dataService.getUserDetails(userId);
         }
 
+        service.updateData=function(formData){
+            debugger;
+           dataService.updateUser(formData.$id,formData.name,formData.email,formData.phone,formData.address)
+        }
+
     }    
 
 

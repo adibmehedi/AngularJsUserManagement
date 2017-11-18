@@ -9,22 +9,21 @@
 <div class="col-md-8" ng-controller="AddUserController">
     <form>
         <div class="form-group">
-            <label for="name">{{ vm.userData.name}}</label>
-            <input type="text" class="form-control" id="name" disabled>
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" value='{{ vm.userData.name }}' disabled>
         </div>
         <div class="form-group">
-            <label for="email">{{ vm.userData.email}}</label>
-            <input type="email" class="form-control" id="email" disabled>
+            <label for="email">Email address::</label>
+            <input type="email" class="form-control" id="email" value='{{ vm.userData.email }}' disabled>
         </div>
         <div class="form-group">
-            <label for="phone">{{ vm.userData.phone}}</label>
-            <input type="text" class="form-control" id="phone" disabled>
+            <label for="phone">Phone:</label>
+            <input type="text" class="form-control" id="phone"  value='{{ vm.userData.phone }}' disabled>
         </div>
         <div class="form-group">
-            <label for="address">{{ vm.userData.address}}</label>
-            <input type="text" class="form-control" id="address" disabled>
+            <label for="address">Address:</label>
+            <input type="text" class="form-control" id="address" value='{{ vm.userData.address }}'  disabled>
         </div>
         <button type="submit" class="btn btn-default">Edit</button>
-        <button type="submit" class="btn btn-default">Cancel</button>
     </form>
 </div>

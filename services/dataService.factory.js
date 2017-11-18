@@ -25,7 +25,8 @@
             getUser:getUser,
             addUser:addUser,
             deleteUser:deleteUser,
-            getUserDetails:getUserDetails
+            getUserDetails:getUserDetails,
+            updateUser:updateUser
         }
 
         return service;
@@ -36,7 +37,7 @@
                name: name,
                email:email,
                phone:phone,
-               address:address
+               address:address,
            });
         }
 
@@ -53,6 +54,20 @@
         function getUserDetails(userId){
             debugger;
             return users.$getRecord(userId);
+        }
+
+        function updateUser(id,name,email,phone,address){
+           
+
+            // var user{
+            //     $id:id, 
+            //     name: name,
+            //    email:email,
+            //    phone:phone,
+            //    address:address,
+            // };
+             
+            // debugger;
         }
 
     }    
