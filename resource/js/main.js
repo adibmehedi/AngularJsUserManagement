@@ -14,7 +14,7 @@
                 controller:'HomeController as vm'
             })
             .when("/users",{
-                templateUrl:'views/displayUser.view.html'
+                redirectTo:'/users/add'
             })
             .when("/users/add",{
                 templateUrl:'views/addUser.view.html',
@@ -23,6 +23,12 @@
             .when("/users/edit",{
                 templateUrl:'views/editUser.view.html'
             })
+            .when("/users/:userId",{
+                templateUrl:'views/displayUser.view.html',
+                controller: 'DisplayController as vm'
+            })
+            
+            
             .otherwise({
                 redirectTo:'/'
             });

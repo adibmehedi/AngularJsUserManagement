@@ -23,14 +23,15 @@
 
         var service={
             getUser:getUser,
-            addUser:addUser
+            addUser:addUser,
+            deleteUser:deleteUser,
+            getUserDetails:getUserDetails
         }
 
         return service;
 
 
         function addUser(name,email,phone,address){
-            debugger;
            users.$add({
                name: name,
                email:email,
@@ -40,8 +41,18 @@
         }
 
         function getUser(){
-            debugger;
             return users;
+        }
+
+        function deleteUser(index){
+            var user=users[index];
+            debugger;
+            users.$remove(user);
+        }
+
+        function getUserDetails(userId){
+            debugger;
+            return users.$getRecord(userId);
         }
 
     }    

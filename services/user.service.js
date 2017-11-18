@@ -12,14 +12,21 @@
         var service=this;
 
         service.addNewUser=function(formData){
-            debugger;
             dataService.addUser(formData.name,formData.email,formData.phone,formData.address);
           
         }
 
         service.getUser=function(){
-            debugger;
             return dataService.getUser();
+        }
+
+        service.deleteUser=function(index){
+            dataService.deleteUser(index);
+        }
+
+        service.getUserDetails=function(userId){
+            debugger;
+            return dataService.getUserDetails(userId);
         }
 
     }    
