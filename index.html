@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User Management</title>
+
+    <link rel="stylesheet" href="resource/css/bootstrap.min.css">
+    <link rel="stylesheet" href="resource/css/style.css">
+    <!-- Angular Library -->
+    <script src="resource/js/angular.js"></script>
+    <script src="resource/js/angular-route.js"></script>
+    <!-- UserApp Main -->
+    <script src="resource/js/main.js"></script>
+    <!-- Services -->
+    <script src="services/user.service.js"></script>
+    <!-- Controllers -->
+    <script src="controllers/addUser.controller.js"></script>
+    
+   
+</head>
+
+<body ng-app="UserApp">
+    <div class="wrapper">
+        <div class="container">
+            <div class="row" ng-view>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
