@@ -5,16 +5,21 @@
         .module('UserApp')
         .service('UserService', UserService);
 
-  // userService.$inject=['$scope'];
+    UserService.$inject=['dataService'];
 
-    function UserService(){
+    function UserService(dataService){
 
         var service=this;
 
-        this.addNewUser=function(formData){
+        service.addNewUser=function(formData){
             debugger;
-            alert("Service");
-            console.log("UserService to addNewUser:",formData.toString());
+            dataService.addUser(formData.name,formData.email,formData.phone,formData.address);
+          
+        }
+
+        service.getUser=function(){
+            debugger;
+            return dataService.getUser();
         }
 
     }    

@@ -12,13 +12,7 @@
         vm.addNewUser = function () {
             debugger;
             UserService.addNewUser(vm.FormData);
-            debugger;
         }
     }
 
-
-
 })();
-
-
-

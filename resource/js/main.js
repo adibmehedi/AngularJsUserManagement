@@ -2,7 +2,7 @@
     "use strict";
 
     angular
-        .module('UserApp', ['ngRoute'])
+        .module('UserApp', ['ngRoute','firebase'])
         .config(Config);
 
     Config.$inject=['$routeProvider'];
@@ -10,7 +10,8 @@
     function Config($routeProvider){
         $routeProvider
             .when("/",{
-                templateUrl:'views/home.view.html'
+                templateUrl:'views/home.view.html',
+                controller:'HomeController as vm'
             })
             .when("/users",{
                 templateUrl:'views/displayUser.view.html'
