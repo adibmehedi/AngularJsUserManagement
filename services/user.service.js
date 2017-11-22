@@ -13,7 +13,6 @@
 
         service.addNewUser=function(formData){
             dataService.addUser(formData.name,formData.email,formData.phone,formData.address);
-          
         }
 
         service.getUser=function(){
@@ -31,7 +30,7 @@
 
         service.updateData=function(formData){
             debugger;
-           dataService.updateUser(formData.$id,formData.name,formData.email,formData.phone,formData.address)
+           dataService.updateUser(formData.$id,formData.name,formData.email,formData.phone,formData.address);
         }
 
     }    

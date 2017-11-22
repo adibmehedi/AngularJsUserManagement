@@ -5,19 +5,10 @@
         .module('UserApp')
         .factory('dataService', dataService);
 
-    var config = {
-    apiKey: "AIzaSyDSCKlrKxxVw9jc1YXjRmR0tdPXgGKetMw",
-    authDomain: "usermanager-93671.firebaseapp.com",
-    databaseURL: "https://usermanager-93671.firebaseio.com",
-    projectId: "usermanager-93671",
-    storageBucket: "usermanager-93671.appspot.com",
-    messagingSenderId: "131121448496"
-    };
+    dataService.$inject=['$firebaseArray', 'APP_CONFIG'];
 
-    firebase.initializeApp(config);
-
-    function dataService($firebaseArray){
-
+    function dataService($firebaseArray, APP_CONFIG){
+        firebase.initializeApp(APP_CONFIG.FIREBASE_API_CREDENTIALS);
         var ref = firebase.database().ref().child("users");
         var users=$firebaseArray(ref);
 
@@ -58,16 +49,14 @@
 
         function updateUser(id,name,email,phone,address){
            
-
-            // var user{
-            //     $id:id, 
-            //     name: name,
-            //    email:email,
-            //    phone:phone,
-            //    address:address,
-            // };
-             
-            // debugger;
+            var childRef=ref.child(id);
+            debugger;
+            childRef.update({
+                name: name,
+                email:email,
+                phone:phone,
+                address:address
+            });
         }
 
     }    

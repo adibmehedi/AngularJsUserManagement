@@ -5,7 +5,7 @@
         .module('UserApp')
         .controller('AddUserController', AddUserController);
 
-    AddUserController.$inject = ['$scope','$location', 'UserService'];
+    
 
     function AddUserController($scope,$location, UserService) {
         var vm = this;
@@ -14,5 +14,8 @@
             $location.path('/home');
         }
     }
+
+
+    AddUserController.$inject = ['$scope','$location', 'UserService'];
 
 })();

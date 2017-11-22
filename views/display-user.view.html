@@ -1,11 +1,3 @@
-<div class="col-md-4">
-     <ul>
-        <li><a href="#!">Home</a></li>
-        <li><a href="#!/users/add">Add User</a></li>
-        <li><a href="#!/users/edit">Edit User</a></li>
-        <li><a href="#!/users">Display</a></li>
-    </ul>
-</div>
 <div class="col-md-8" ng-controller="AddUserController">
     <form>
         <div class="form-group">
@@ -24,6 +16,8 @@
             <label for="address">Address:</label>
             <input type="text" class="form-control" id="address" value='{{ vm.userData.address }}'  disabled>
         </div>
-        <button type="submit" class="btn btn-default">Edit</button>
+        <button type="submit" class="btn btn-default" ng-click="vm.editUser(vm.userData.$id)">Edit</button>
     </form>
+</div>
+<div class="col-md-4">
 </div>

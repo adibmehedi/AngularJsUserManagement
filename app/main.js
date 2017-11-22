@@ -16,16 +16,16 @@
             .when("/users",{
                 redirectTo:'/'
             })
-            .when("/users/add",{
-                templateUrl:'views/addUser.view.html',
+            .when("/users/add",{    
+                templateUrl:'views/add-user.view.html',
                 controller:'AddUserController as vm'
             })
             .when("/edit/:userId",{
-                templateUrl:'views/editUser.view.html',
-                 controller:'EditUserController as vm'
+                templateUrl:'views/edit-user.view.html',
+                controller:'EditUserController as vm'
             })
             .when("/users/:userId",{
-                templateUrl:'views/displayUser.view.html',
+                templateUrl:'views/display-user.view.html',
                 controller: 'DisplayController as vm'
             })
             .otherwise({

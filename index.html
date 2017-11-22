@@ -10,26 +10,33 @@
     <link rel="stylesheet" href="resource/css/bootstrap.min.css">
     <link rel="stylesheet" href="resource/css/style.css">
     <!--Library -->
-    <script src="resource/js/angular.js"></script>
-    <script src="resource/js/firebase.js"></script>
-    <script src="resource/js/angular-route.js"></script>
-    <script src="resource/js/angularfire.js"></script>
+    <script src="resource/lib/angular.js"></script>
+    <script src="resource/lib/firebase.js"></script>
+    <script src="resource/lib/angular-route.js"></script>
+    <script src="resource/lib/angularfire.js"></script>
     <!-- UserApp Main -->
-    <script src="resource/js/main.js"></script>
+    <script src="app/main.js"></script>
+    <script src="app/config.js"></script>
     <!-- Services -->
-    <script src="services/dataService.factory.js"></script>
+    <script src="services/data-service.factory.js"></script>
     <script src="services/user.service.js"></script>
     <!-- Controllers -->
     <script src="controllers/home.controller.js"></script>
-    <script src="controllers/addUser.controller.js"></script>
+    <script src="controllers/add-user.controller.js"></script>
     <script src="controllers/display.controller.js"></script>
-    <script src="controllers/editUser.controller.js"></script>
+    <script src="controllers/edit-user.controller.js"></script>
 
 </head>
 
 <body ng-app="UserApp">
     <div class="wrapper">
         <div class="container">
+            <div class="row">
+                <div class="col-md-12 top-bar">
+                    <a href="#!"><button class="btn btn-primary">Home</button> </a>
+                    <a href="#!/users/add"><button class="btn btn-primary">Add User</button></a>
+                </div>
+            </div>
             <div class="row" ng-view>
 
             </div>
